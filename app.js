@@ -13,6 +13,9 @@ var favicon = require('serve-favicon')
 
 var app = express();
 
+var routes = require('./app/routes');
+var users = require('./app/routestest');
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +35,10 @@ if ('development' == app.get('env')) {
 }
 
 // routing
-require('./app/routes.js')(app, streams);
+//require('./app/routes.js')(app, streams);
+
+app.use('/', routes);
+app.use('/api/usertest', users);
 
 var server = app.listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

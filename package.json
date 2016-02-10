@@ -20,6 +20,8 @@
     "forever": "0.10.8",
     "jade": "^1.9.2",
     "method-override": "^2.3.2",
+    "mongodb": "^1.4.40",
+    "monk": "^1.0.1",
     "morgan": "^1.5.2",
     "multer": "^0.1.8",
     "serve-favicon": "^2.2.0",
