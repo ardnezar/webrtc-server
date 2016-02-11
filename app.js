@@ -13,8 +13,8 @@ var favicon = require('serve-favicon')
 
 var app = express();
 
-var routes = require('./app/routes');
-var users = require('./app/routestest');
+var routes = require('./routes/routes');
+var users = require('./routes/routestest');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
