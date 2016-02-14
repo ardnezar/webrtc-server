@@ -71,7 +71,8 @@ module.exports = function(io, streams) {
 	    /*
 	     * Handle one-to-one messaging from the client
 	     */
-	    client.on('message', function (details) {
+	    client.on('MESSAGE', function (details) {
+	    	console.log('-- ' + client.id + ' received message:'+ details.payload+' to:'+details.to);
 	    	var otherClient = io.sockets.connected[details.to];
 	
 	    	if (!otherClient) {
